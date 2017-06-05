@@ -1,3 +1,6 @@
 [submodule "themes/next"]
 	path = themes/next
 	url = https://github.com/lintongtale/hexo-theme-next.git
+[submodule ".deploy_git"]
+	path = .deploy_git
+	url = https://github.com/lintongtale/lintongtale.github.io.git
