@@ -127,3 +127,16 @@ git bash 出现vim的时候如何退出
 
 cd .. 返回上一级目录  
 cd <file> 进入某一目录
+
+## 三、git submodule子模块
+添加
+* git submodule add 仓库地址 路径  
+	注意：路径不能以 / 结尾（会造成修改不生效）、不能是现有工程已有的目录。
+
+删除
+* 首先，要在“.gitmodules”文件中删除相应配置信息。然后，执行“git rm –cached ”命令将子模块所在的文件从git中删除。
+
+下载的工程带有submodule
+* 当使用git clone下来的工程中带有submodule时，初始的时候，submodule的内容并不会自动下载下来的，此时，只需执行如下命令：  
+git submodule update --init --recursive
+即可将子模块内容下载下来后工程才不会缺少相应的文件。
