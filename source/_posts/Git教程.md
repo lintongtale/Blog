@@ -24,7 +24,7 @@ description:
 * git clone git@github.com:lintongtale/test.git 从远程克隆一个本地库  
 	ls 列出所有文件
 ## 3、版本控制
-## ![git状态转移](./Git使用/git-status.png)
+## ![git状态转移](http://wx2.sinaimg.cn/mw690/c2781ec1ly1fgdvkucbtkj20do07pdgr.jpg)
 * mkdir <file> 创建一个空目录  
 	cd <file>  
 	pwd 
@@ -75,11 +75,9 @@ description:
 * git remote –v 查看远程仓库的信息
 * git push origin master 推送分支，git push origin dev推送dev分支
 * master是主分支，要时刻与远程同步；dev是开发分支，团队所有成员都需要在上面工作，需要远程同步；bug分支只用于本地修复bug，无需推送到远程；feature分支是否推送到远程，取决于你是否和其他人合作在上面开发
-* git checkout –b dev origin/dev 创建远程origin的dev分支到本地
-		此时，可以在dev分支上修改，并push到远程；若此时，另一个人同样在对dev分支的文件作了修改，并试图推送，出现erro并提示“current branch is behind”
+* git checkout –b dev origin/dev 创建远程origin的dev分支到本地。此时，可以在dev分支上修改，并push到远程；若此时，另一个人同样在对dev分支的文件作了修改，并试图推送，出现erro并提示“current branch is behind”
 * git pull 把最新的提交从远程抓下来
-* git branch –set-upstream dev origin/dev 指定本地分支dev与远程origin/dev分支链接，之后才能git pull
-		此时，将本地修改与远程merge，但是会有冲突，需要手动解决，解决后commit再push
+* git branch –set-upstream dev origin/dev 指定本地分支dev与远程origin/dev分支链接，之后才能git pull。此时，将本地修改与远程merge，但是会有冲突，需要手动解决，解决后commit再push
 ## 5、标签管理
 * git tag v1.0 创建标签；默认标签是打在最新提交的commit上的
 * git tag 查看所有标签

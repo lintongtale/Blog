@@ -7,7 +7,7 @@ tags:
 - 教程
 categories:
 - 编程
-- VS
+- vs
 description:
 - VS常用快捷键。
 ---
