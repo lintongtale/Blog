@@ -91,6 +91,7 @@ description:
 * git push origin :refs/tags/v0.9 删除远程标签，需先删除本地标签
 
 ## 6、自定义Git
+* touch .gitignore 添加.gitignore文件
 * git check-ignore –v App.class 检查.gitignore的规则错误
 * git config –global alias.st status 配置status的别名，此时git st等效于git status
 * git config –global alias.unstage 'reset HEAD' 此时git unstage test.py相当于git reset HEAD test.py，即把暂存区的修改撤销掉（unstage）
