@@ -53,8 +53,8 @@ description:
 	git branch test 创建分支  
 	git checkout test 切换分支  
 	git branch 查看当前分支
-* git merge test 将test分支合并到master分支上，Fast forward模式，<删除分支时会丢失分支信息>  
-	git merge --no-ff -m "merge with no-ff" 合并分支，no-ff表示禁用Fast forward，<删除分支时不会丢失分支信息>
+* git merge test 将test分支合并到master分支上，Fast forward模式，<删除分支时会丢失分支信息>
+	* git merge --no-ff -m "merge with no-ff" 合并分支，no-ff表示禁用Fast forward，<删除分支时不会丢失分支信息>
 * git branch -d test 删除test分支
 * git log --graph 查看分支合并图  
 	当master分支和test分支各自都有新的提交时，Git无法快速合并，只能试图将各自的修改合并起来。
@@ -76,7 +76,11 @@ description:
 * git push origin master 推送分支，git push origin dev推送dev分支
 * master是主分支，要时刻与远程同步；dev是开发分支，团队所有成员都需要在上面工作，需要远程同步；bug分支只用于本地修复bug，无需推送到远程；feature分支是否推送到远程，取决于你是否和其他人合作在上面开发
 * git checkout –b dev origin/dev 创建远程origin的dev分支到本地。此时，可以在dev分支上修改，并push到远程；若此时，另一个人同样在对dev分支的文件作了修改，并试图推送，出现erro并提示“current branch is behind”
-* git pull 把最新的提交从远程抓下来
+* git pull 把最新的提交从远程抓下来  
+	* 相当于从远程获取最新版本，并merge到本地，更安全的做法是：  
+	git fetch origin master  
+	git log -p master..origin/master  
+	git merge origin/master
 * git branch –set-upstream dev origin/dev 指定本地分支dev与远程origin/dev分支链接，之后才能git pull。此时，将本地修改与远程merge，但是会有冲突，需要手动解决，解决后commit再push
 ## 5、标签管理
 * git tag v1.0 创建标签；默认标签是打在最新提交的commit上的
@@ -139,3 +143,12 @@ cd <file> 进入某一目录
 * 当使用git clone下来的工程中带有submodule时，初始的时候，submodule的内容并不会自动下载下来的，此时，只需执行如下命令：  
 git submodule update --init --recursive
 即可将子模块内容下载下来后工程才不会缺少相应的文件。
+
+## 四、常见问题
+* 1 merge 冲突，git界面显示“# Please enter a commit message to explain why this merge is necessary”，按照下列步骤解决：
+	* Press i to enter insert mode.
+	* Now you can type your message, as if you were in a normal (non-modal) text editor.
+	* Press esc to go back to command mode.
+	* Then type :w followed by enter to save.
+	* Finally :q followed by enter to quit.
+
