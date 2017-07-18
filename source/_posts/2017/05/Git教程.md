@@ -44,6 +44,8 @@ description:
 * git status 查看状态
 * git diff HEAD -- <file> 查看工作区和版本库里面最新版本的区别
 * git checkout -- <file> 让文件回到最近一次git commit或git add时的状态（撤销修改）
+	* git checkout -- <file> 取消某个文件修改
+	* git checkout . 取消所有文件修改
 * rm <file> 删除文件  
 	git rm <file>  
 	git commit -m "remove file"  
