@@ -44,7 +44,16 @@ description:
 	
 指定文件目录中正斜杠和反斜杠（“/”和“\\”）的区别
 	• “/“正斜杠，posix标准，linux中用于指定文件目录，“./”中“.”表示当前目录
-	• “\\”反斜杠，第一个“\”为转义字符，windows中用于指定文件目录，此外windows也支持“/”
+	• “\\”反斜杠，第一个“\”为转义字符，windows中用于指定文件目录，此外 windows 也支持“/”
 
-C/C++中extern关键字详解 - chao_yu - 博客园
+C/C++ 中 extern 关键字详解 - chao_yu - 博客园
 http://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777431.html
+
+
+# C++ Primer：C++ 基础
+http://jennica.space/2017/01/13/cpp-primer-basic/
+## 1、开始学习 C++
+* 文件重定向：将标准输入输出与文件关联，运行命令 prog1 < infile > outfile，prog1 是编译后所产生的可执行文件，上述命令会从一个名为 infile 的文件中读取输入数据，并将输出结果写入到一个名为 outfile 的文件中。
+
+# C++ 的一些规范
+* 1、包含来自标准库的头文件时，用尖括号（<>）包含头文件名，对于不属于标准库的头文件，则用双引号（""）包围。

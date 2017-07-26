@@ -154,3 +154,7 @@ git submodule update --init --recursive
 	* Then type :w followed by enter to save.
 	* Finally :q followed by enter to quit.
 
+* 2 本地克隆远端非Master分支
+	cd RepoPath
+	git branch
+	git checkout -b branchName origin/branchName
